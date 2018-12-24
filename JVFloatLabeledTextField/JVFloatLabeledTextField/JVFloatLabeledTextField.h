@@ -134,6 +134,12 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor * placeholderColor;
 
 /**
+ * Padding to be applied to the y coordinate of the bottom border of the textfield.
+ * Deafults to 4.
+ **/
+@property (nonatomic) IBInspectable CGFloat bottomBorderYPadding;
+
+/**
  *  Sets the placeholder and the floating title
  *
  *  @param placeholder The string that to be shown in the text field when no other text is present.

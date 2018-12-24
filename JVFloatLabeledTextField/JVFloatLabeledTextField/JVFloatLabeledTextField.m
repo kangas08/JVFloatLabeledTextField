@@ -74,6 +74,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     _adjustsClearButtonRect = YES;
     _isFloatingLabelFontDefault = YES;
     
+    _bottomBorderYPadding = 4.0;
     [self addBottomBorderToTextField];
 }
 
@@ -103,7 +104,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     [self addSubview: border];
     border.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self addConstraint: [NSLayoutConstraint constraintWithItem: border attribute: NSLayoutAttributeTop relatedBy: NSLayoutRelationEqual toItem: self attribute: NSLayoutAttributeBottom multiplier: 1.0 constant: 4.0]];
+    [self addConstraint: [NSLayoutConstraint constraintWithItem: border attribute: NSLayoutAttributeTop relatedBy: NSLayoutRelationEqual toItem: self attribute: NSLayoutAttributeBottom multiplier: 1.0 constant: _bottomBorderYPadding]];
     
     [self addConstraint: [NSLayoutConstraint constraintWithItem: border attribute: NSLayoutAttributeLeft relatedBy: NSLayoutRelationEqual toItem: self attribute: NSLayoutAttributeLeft multiplier: 1.0 constant: 0.0]];
     
